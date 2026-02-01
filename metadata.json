@@ -1,0 +1,7 @@
+{
+  "name": "GFA Global Film Alliance",
+  "description": "A comprehensive platform for GFA Global Film Alliance featuring certification, casting, graduate support programs, and commercial membership perks for the film industry.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
