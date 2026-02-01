@@ -17,6 +17,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const handleHashChange = () => {
       setCurrentPath(window.location.hash || '#/');
+      window.scrollTo(0, 0); // 切换页面时自动回到顶部
     };
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
@@ -48,9 +49,10 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-black">
       <Navbar currentPath={currentPath} />
-      <main className="flex-grow pt-16">
+      {/* 调整 pt-28 (112px) 以匹配 Navbar 的 h-28 */}
+      <main className="flex-grow pt-28">
         {renderPage()}
       </main>
       <Footer />
